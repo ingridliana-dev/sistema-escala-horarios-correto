@@ -4,14 +4,20 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "functions": {
-    "api/*.js": {
+    "server/index.ts": {
       "memory": 1024,
       "maxDuration": 10
     }
   },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/(.*)",
+      "destination": "server/index.ts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "env": {
     "NODE_ENV": "production"
@@ -23,11 +29,7 @@
     },
     {
       "src": "client/**",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/public",
-        "buildCommand": "npm run build:client"
-      }
+      "use": "@vercel/static"
     }
   ]
 }
