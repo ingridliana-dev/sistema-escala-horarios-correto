@@ -105,3 +105,15 @@
     "bufferutil": "^4.0.8"
   }
 }
+{
+  "name": "sistema-escala-horarios-correto",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  }
+}
