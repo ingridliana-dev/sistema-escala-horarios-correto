@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Sistema de Escala de Horários</h1>
-    </main>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-4xl font-bold">Sistema de Escala de Horários</h1>
+      <p className="text-xl">Bem-vindo ao sistema</p>
+    </div>
   )
 }
