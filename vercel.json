@@ -35,5 +35,6 @@
         "buildCommand": "npm run build"
       }
     }
-  ]
+  ],
+  "regions": ["gru1"]
 }
